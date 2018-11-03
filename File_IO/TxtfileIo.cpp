@@ -3,26 +3,44 @@
 #include <string>
 using namespace std;
 
+void getNumber(int& number1, int& number2, ifstream& file);
+void pushResults(int& result, ofstream& file);
+
 int main(){
-    int i=0, nbr1 = 0, nbr2 = 0, result=0;
+    int nbr1, nbr2, result = 0;
+    ifstream myfile_in("The_file.txt");
+    getNumber(nbr1, nbr2, myfile_in);
+    myfile_in.close();
+    result = nbr1 * nbr2;
+    cout << "The result is " << result << endl;
+    ofstream myfile_out("The_file.txt", std::ios::app);
+    pushResults(result, myfile_out);
+    myfile_out.close();
+    return 0;
+}
+
+
+void getNumber(int& number1, int& number2, ifstream& file){
+    int i= 0;
     string line;
-    ifstream myfile("The_file.txt");
-    if (myfile.is_open()){
-        while ( getline(myfile, line) ){
+    if (file.is_open()){
+        while ( getline(file, line) ){
             if ( i == 1 ){
-                nbr1 = stoi(line);
+                number1 = stoi(line);
                 cout << "The first numbr is " 
-                     << nbr1 << endl;
+                     << number1 << endl;
             } else if( i == 3) {
-                nbr2 = stoi(line);
+                number2 = stoi(line);
                 cout << "The second numbr is " 
-                     << nbr2 << endl;
+                     << number2 << endl;
             }
             i += 1;
         }
-    result = nbr1 * nbr2;
-    } 
-    else { cout << " Error opening the file " << endl;}
-    myfile.close();
-    return 0;
+    }
+}
+
+void pushResults(int& result, ofstream& file){
+    if (file.is_open()) {
+        file << result << ".\n";
+    }
 }
