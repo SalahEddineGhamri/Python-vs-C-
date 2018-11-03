@@ -1,0 +1,5 @@
+Read this text, and get the following number:
+1
+give it's multiplcation with the following number:
+5
+here:
