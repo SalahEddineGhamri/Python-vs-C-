@@ -13,12 +13,12 @@ int main()
         {
             cout << nbr << " " << line << endl;
             if( nbr == 2 ){ nbr1 = stoi(line);}
-            else if(nbr == 4 ){ nbr2 = stoi(line);}
-            else if(nbr == 5 ){
+            if( nbr == 4 ){ nbr2 = stoi(line);}
+            if( nbr==5 && nbr1 && nbr2 ){
                 result = nbr1 * nbr2;
                 file << result;
+                cout << result << endl;
             }
-            cout << result << endl;
             nbr += 1;
         }
     }else{ cout << " Errors in opening file "<< endl; }
