@@ -1,5 +1,8 @@
 // header file for humanClas file h
 // we put only declarations here 
+#ifndef HUMANCLASS_H // if humanClass.h is not already defined
+#define HUMANCLASS_H // Define it
+
 #include<iostream>
 #include<string>
 using namespace std;
@@ -17,3 +20,5 @@ class human{
     protected:
         // this is protected data 
 };
+
+#endif // end of #ifndef

@@ -1,5 +1,5 @@
 // this is the main script of our program
-#include"humanClass.h"
+#include "humanClass.h"
 
 int main(){
     human Salah( "Salah", 30);
