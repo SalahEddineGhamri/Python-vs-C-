@@ -3,8 +3,7 @@ This scripts shows the print opetions in C++
 author : Salah Eddine Ghamri
 */
 
-#include <iostream>
-#include <iomanip>
+#include <iostream> 
 
 using namespace std;
 
