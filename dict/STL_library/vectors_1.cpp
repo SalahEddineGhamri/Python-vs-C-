@@ -9,10 +9,10 @@ int main(){
     names.push_back("Salah");
     names.push_back("Eddine");
     names.push_back("Ghamri");
-
+    names.pop_back();
     cout << names.size() << endl;
     // like array
-    for (int i=0 ; i < 3; ++i){
+    for (int i=0 ; i < names.size(); ++i){
         cout << i << ' ';
         cout << names[i] << endl;
     }
