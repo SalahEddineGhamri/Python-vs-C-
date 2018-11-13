@@ -15,8 +15,8 @@ vector<person> persones;
 
 int main(){
 
-    persones.push_back(person(20, "Salah"));
-    persones.push_back(person(40, "Eddine"));
+    persones.emplace_back(20, "Salah");
+    persones.emplace_back(40, "Eddine");
 
     for(int i=0; i<persones.size(); ++i)
         cout << persones[i].name << endl;
