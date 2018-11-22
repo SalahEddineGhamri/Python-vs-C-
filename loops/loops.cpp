@@ -1,15 +1,24 @@
-#include<iostream>
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <vector>
+
 using namespace std;
 
 int main(){
-
+    printf("\n;");
     // for loop
-
+    
     for(int i=0; i<10; i++){
         printf("for now is %d\t", i);
     }
     printf("\n");
-    // while loop
+
+    for (size_t j = 0; j < 10; j++) {
+      std::cout << "do" << j << std::endl;
+    }
+
+    //
     int i = 0;
     while( i<=10){
         printf("while now is %d\t", i);
