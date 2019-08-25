@@ -6,6 +6,6 @@ $ cd build
 2 - Generate make file:
 $ cmake -G "Unix Makefiles" ..
 3 - Build and configure:
-$ cmake --build . --config
+$ cmake --build . --config release
 4 - Execute:
 $ ./Task1App <inputfile path&name> <output path&name>
