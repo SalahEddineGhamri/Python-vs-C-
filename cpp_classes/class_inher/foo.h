@@ -1,23 +1,24 @@
 #ifndef FOO_H
 #define FOO_H
 
-class base{
-    int a;
-    int b;
-public:
-    base();
-    base(int a, int b);
-    int add();
-    ~base();
-protected:
-//
-private:
-//
+template<typename T>
+class container
+{
+    T a;
+    public:
+    container();
+    container(T a);
+    void who();
 };
 
-class base_child:public base{
-public:
-    base_child(int a, int b):base(a, b){}
+
+template<typename T>
+class container_child: public container<T>
+{
+    public:
+    container_child();
+    container_child(T a);
+
 };
 
 #endif

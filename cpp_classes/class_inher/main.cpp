@@ -1,8 +1,12 @@
 #include <iostream>
 #include "foo.h"
+#include "foo.cpp"
 
 int main(){
-    base_child b(5, 6);
-    std::cout << b.add() << std::endl;
+
+    container_child<int> a(5);
+
+    a.who();
+
     return 0;
 }
