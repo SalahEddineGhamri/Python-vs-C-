@@ -4,6 +4,7 @@
 #include <thread>
 #include <iostream>
 #include <mutex>
+#include <time>
 
 /**
  * The Singleton class defines the `GetInstance` method that serves as an
